@@ -3,14 +3,15 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 from datetime import datetime
+from django.template import loader
 
 def home(request):
     content = "<html><body><h1>this is some testing</h1></body></html>"
     return HttpResponse(content)
 
 def login(request):
-    logindata = "<html><body><h1>LOGIN RIGHT NOW</h1></body></html>"
-    return HttpResponse(logindata)
+    template = loader.get_template("login/login.html")
+    return HttpResponse(template.render())
 
 def display_date(request):
     date_month = datetime.today().month

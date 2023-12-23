@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'login/style.css' %}">
 <body>
-    <h2 style="background-color: red"> About</h2>
+    <h2> About</h2>
     <p style="background-color: aqua;"> {{about}}</p>
 </body>
 </html>

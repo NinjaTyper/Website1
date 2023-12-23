@@ -21,3 +21,7 @@ button {
     width: 80px;
     align-self: flex-end;
 }
+
+h2 {
+    background-color: salmon;
+}

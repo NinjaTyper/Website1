@@ -19,3 +19,7 @@ def display_date(request):
     date_year = datetime.today().year
     today_date = str(date_month) + "/" + str(date_day) +"/" + str(date_year)
     return HttpResponse(today_date)
+
+def about(request):
+    about_content = {'about' : "This website is made by Peter, Phu, Luigi. Peter is a 12 year old boy who spends far too much time on typing"}
+    return render(request, "about.html", about_content)
